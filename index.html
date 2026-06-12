@@ -1076,32 +1076,32 @@ const APP_KEY='sb_applications';
 const EV_KEY='sb_event_regs';
 const ANALYTICS_KEY='sb_analytics';
 /* ---------- BACKEND CONFIG ----------
-   To switch on the shared Google Sheets backend, paste your Apps Script
-   Web App URL (ending in /exec) into SHEETS_URL, and put the same secret
-   you set in the script into SHEETS_TOKEN. Leave SHEETS_URL empty to run
-   in local (prototype) mode. */
-const SHEETS_URL='';
-const SHEETS_TOKEN='';
+   1. Deploy apps-script/Code.gs as a Google Apps Script Web App
+      (Execute as: Me · Who has access: Anyone).
+   2. Paste the /exec URL below into SHEETS_URL.
+   3. Paste the TOKEN you set in the script into SHEETS_TOKEN.
+   Leave SHEETS_URL empty to stay in local (prototype) mode. */
+const SHEETS_URL='https://script.google.com/macros/s/AKfycbzm2VVLAr2g8iDrZn4dVF3--jaQhDNoDAqbv5UD7FMU9I0YIjnsa8mrzoeFGarzqmrhfA/exec';
+const SHEETS_TOKEN='7d4f8c1a9b3e6f2d5a8c7e1f4b9d2a6c8f3e7b1d5a9c2f6e4b8d1a7c3f9e5b2';
 function backendOn(){ return typeof SHEETS_URL==='string' && SHEETS_URL.indexOf('http')===0; }
-function hasArtifactStore(){ return typeof window!=='undefined' && window.storage && typeof window.storage.get==='function'; }
+// Analytics stay in localStorage — syncing them on every page load would hit Apps Script quotas.
+function isAnalyticsKey(k){ return k===ANALYTICS_KEY; }
 async function loadKey(k){
   try{
-    if(backendOn()){
+    if(backendOn()&&!isAnalyticsKey(k)){
       const res=await fetch(SHEETS_URL+'?key='+encodeURIComponent(k)+'&token='+encodeURIComponent(SHEETS_TOKEN));
       const j=await res.json();
       return (j&&j.data)?j.data:[];
     }
-    if(hasArtifactStore()){ const r=await window.storage.get(k); return r&&r.value?JSON.parse(r.value):[]; }
     const v=localStorage.getItem(k); return v?JSON.parse(v):[];
   }catch(e){ return []; }
 }
 async function saveKey(k,list){
   try{
-    if(backendOn()){
+    if(backendOn()&&!isAnalyticsKey(k)){
       await fetch(SHEETS_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'save',key:k,data:list,token:SHEETS_TOKEN})});
       return;
     }
-    if(hasArtifactStore()){ await window.storage.set(k, JSON.stringify(list)); return; }
     localStorage.setItem(k, JSON.stringify(list));
   }catch(e){ console.error('Storage save failed:',e); }
 }
