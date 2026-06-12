@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soho Boulevard — Exclusive Social & Wellness Club, Abuja</title>
+<meta name="description" content="An exclusive social & wellness club in Maitama, Abuja. Membership by application.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F2E9;
+  --paper-2:#EFE8D9;
+  --paper-3:#E7DECB;
+  --ink:#241C13;
+  --ink-2:#2E2418;
+  --brown:#6B5A45;
+  --accent:#A07C42;
+  --accent-2:#C9A45C;
+  --smoke:#8A7C66;
+  --line:rgba(36,28,19,.16);
+  --line-soft:rgba(36,28,19,.10);
+  --line-gold:rgba(160,124,66,.34);
+  --serif:'Marcellus',Georgia,serif;
+  --sans:'Archivo',Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--ink);color:var(--accent-2)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;line-height:1.12}
+.eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--accent)}
+.eyebrow .num{color:var(--smoke);margin-right:.9em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+section{position:relative}
+.section-pad{padding:110px 0}
+.mark svg{display:block}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(246,242,233,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:13px;color:var(--ink)}
+.brand .mark{width:34px;height:34px;color:var(--brown)}
+.brand-name{font-family:var(--serif);font-size:16px;letter-spacing:.24em;text-transform:uppercase}
+.nav-links{display:flex;gap:24px;align-items:center;list-style:none}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);transition:color .25s}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--accent)}
+.btn{display:inline-block;cursor:pointer;font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:15px 30px;border:1px solid var(--ink);color:var(--ink);background:transparent;transition:background .3s,color .3s}
+.btn:hover,.btn:focus-visible{background:var(--ink);color:var(--accent-2)}
+.btn-solid{background:var(--ink);color:var(--accent-2);border-color:var(--ink)}
+.btn-solid:hover,.btn-solid:focus-visible{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.btn-light{border-color:var(--paper);color:var(--paper)}
+.btn-light:hover,.btn-light:focus-visible{background:var(--paper);color:var(--ink)}
+.btn-sm{padding:11px 22px}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.nav-toggle span{display:block;width:22px;height:1px;background:var(--ink);margin:6px 0;transition:.3s}
+
+/* HERO */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch;padding-top:74px}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:70px 64px 70px 0;position:relative}
+.hero-copy .inner{max-width:560px;margin-left:auto;padding-left:32px;width:100%}
+.hero .est{font-size:11px;letter-spacing:.36em;text-transform:uppercase;color:var(--smoke);margin-bottom:30px}
+.hero .est b{color:var(--accent);font-weight:600}
+.hero h1{font-size:clamp(38px,5vw,68px);letter-spacing:.005em;margin-bottom:26px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.sub{max-width:460px;color:var(--smoke);font-size:17px;margin-bottom:40px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.hero-note{margin-top:34px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent)}
+.hero-note span{margin:0 12px;color:var(--line-gold)}
+.hero-media{position:relative;overflow:hidden;background:var(--ink)}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.02)}
+.hero-media::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(36,28,19,.34),transparent 55%)}
+.hero-media .frame{position:absolute;inset:26px;border:1px solid rgba(246,242,233,.35);pointer-events:none}
+.hero-media .badge{position:absolute;left:42px;bottom:42px;z-index:2;color:var(--paper);font-family:var(--serif);font-size:15px;letter-spacing:.2em;text-transform:uppercase}
+.hero-media .badge small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.3em;color:var(--accent-2);margin-top:6px}
+
+/* HEADERS */
+.article-head{display:flex;align-items:baseline;gap:26px;margin-bottom:16px;flex-wrap:wrap}
+.lede{color:var(--smoke);max-width:640px;font-size:16.5px;margin-bottom:54px}
+.h2-big{font-size:clamp(30px,4vw,46px);margin-bottom:18px}
+
+/* TIERS */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+.tier{background:var(--paper);padding:46px 36px 42px;display:flex;flex-direction:column;transition:background .35s}
+.tier:hover{background:var(--paper-2)}
+.tier .t-index{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--smoke);margin-bottom:24px}
+.tier h3{font-size:26px;margin-bottom:6px}
+.tier .t-sub{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:28px}
+.tier ul{list-style:none;flex:1}
+.tier li{padding:13px 0;border-top:1px solid var(--line-soft);font-size:14.5px;color:var(--ink-2)}
+.tier li::before{content:'—';color:var(--accent);margin-right:12px}
+.tier-prive{background:var(--ink);border-top:2px solid var(--accent-2);position:relative}
+.tier-prive:hover{background:var(--ink-2)}
+.tier-prive .t-index{color:var(--accent-2)}
+.tier-prive h3{color:var(--paper)}
+.tier-prive .t-sub{color:var(--accent-2)}
+.tier-prive li{color:var(--paper-3);border-top-color:rgba(246,242,233,.12)}
+.tier-prive li::before{color:var(--accent-2)}
+.tier-badge{position:absolute;top:-13px;right:28px;background:var(--accent-2);color:var(--ink);font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:6px 14px}
+.tier-footnote{display:flex;gap:42px;margin-top:38px;flex-wrap:wrap;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+.tier-footnote span::before{content:'◆';font-size:7px;vertical-align:2px;margin-right:11px;color:var(--accent)}
+
+/* CLUBS */
+.clubs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.club{background:var(--paper);border:1px solid var(--line-soft);overflow:hidden;display:flex;flex-direction:column;transition:transform .4s,box-shadow .4s}
+.club:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(36,28,19,.13)}
+.club-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--ink)}
+.club-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;filter:saturate(.92)}
+.club:hover .club-img img{transform:scale(1.06)}
+.club-img .c-tag{position:absolute;left:16px;top:16px;background:rgba(36,28,19,.78);color:var(--accent-2);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;padding:6px 12px}
+.club-body{padding:26px 26px 30px}
+.club-body h3{font-size:21px;margin-bottom:16px}
+.club-body ul{list-style:none}
+.club-body li{font-size:13.5px;color:var(--smoke);padding:6px 0}
+.club-body li::before{content:'·';color:var(--accent);margin-right:9px;font-weight:700}
+
+/* FLEX ACCESS */
+.flex-access{border:1px solid var(--line);padding:64px 56px;display:grid;grid-template-columns:1.15fr 1fr;gap:54px;align-items:center;background:var(--paper-2)}
+.flex-access h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:20px}
+.flex-access p{color:var(--smoke);margin-bottom:18px}
+.fa-points{list-style:none}
+.fa-points li{padding:16px 0;border-top:1px solid var(--line-soft);font-size:15px;color:var(--ink-2)}
+.fa-points li::before{content:'—';color:var(--accent);margin-right:14px}
+.fa-terms{margin-top:24px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;gap:28px;flex-wrap:wrap}
+
+/* SOCIAL & WELLNESS */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.duo-col{position:relative;overflow:hidden;border:1px solid var(--line-soft);min-height:420px;display:flex;align-items:flex-end}
+.duo-col img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9)}
+.duo-col::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,28,19,.15) 0%,rgba(36,28,19,.86) 78%)}
+.duo-body{position:relative;z-index:2;padding:40px 38px;color:var(--paper)}
+.duo-body h3{font-size:26px;margin-bottom:6px;color:var(--paper)}
+.duo-body .d-sub{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent-2);margin-bottom:24px}
+.duo-body ul{list-style:none}
+.duo-body li{padding:11px 0;border-top:1px solid rgba(246,242,233,.16);font-size:14.5px;color:var(--paper-3)}
+.duo-body li::before{content:'—';color:var(--accent-2);margin-right:12px}
+
+/* UPCOMING EVENTS */
+.events-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.event-card{position:relative;overflow:hidden;border:1px solid var(--line-soft);background:var(--ink);min-height:320px;display:flex;align-items:flex-end;cursor:pointer;transition:transform .4s,box-shadow .4s}
+.event-card:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(36,28,19,.18)}
+.event-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9);transition:transform .7s}
+.event-card:hover img{transform:scale(1.05)}
+.event-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,28,19,.12) 0%,rgba(36,28,19,.92) 84%)}
+.event-card .ec-body{position:relative;z-index:2;padding:34px}
+.event-card .ec-date{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent-2);margin-bottom:12px}
+.event-card .ec-cat{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-3);margin-bottom:10px}
+.event-card h3{font-size:27px;color:var(--paper);margin-bottom:10px}
+.event-card p{font-size:14px;color:var(--paper-3);max-width:360px;margin-bottom:20px}
+.event-card .ec-link{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2)}
+.event-card .ec-link::after{content:' →'}
+.event-card .ec-tag{position:absolute;top:18px;right:18px;z-index:2;background:var(--accent-2);color:var(--ink);font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:5px 11px}
+
+/* EXPERIENCE */
+.experience{position:relative;overflow:hidden;color:var(--paper);text-align:center}
+.experience img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.experience::after{content:'';position:absolute;inset:0;background:rgba(36,28,19,.74)}
+.experience .wrap{position:relative;z-index:2}
+.experience blockquote{font-family:var(--serif);font-size:clamp(26px,3.6vw,42px);max-width:840px;margin:0 auto 26px;line-height:1.3}
+.experience blockquote em{font-style:normal;color:var(--accent-2)}
+.experience p{color:var(--paper-3);max-width:560px;margin:0 auto}
+.exp-points{display:flex;justify-content:center;flex-wrap:wrap;margin-top:48px}
+.exp-points div{padding:0 36px;border-left:1px solid rgba(246,242,233,.2);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-3)}
+.exp-points div:first-child{border-left:none}
+
+/* FOUNDERS */
+.founder{border:1px solid var(--line-gold);padding:66px 58px;display:grid;grid-template-columns:auto 1fr auto;gap:52px;align-items:center;background:var(--paper-2)}
+.founder-card{width:208px;height:128px;border:1px solid var(--accent);padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(135deg,#2E2418,#1A140C);box-shadow:0 20px 44px rgba(36,28,19,.32);transform:rotate(-4deg)}
+.founder-card .fc-top{display:flex;justify-content:space-between;align-items:center}
+.founder-card .fc-mono{width:26px;height:26px;color:var(--accent-2)}
+.founder-card .fc-no{font-size:9px;letter-spacing:.2em;color:var(--smoke)}
+.founder-card .fc-name{font-family:var(--serif);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper)}
+.founder-card .fc-line{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent-2)}
+.founder h2{font-size:clamp(26px,3vw,36px);margin-bottom:14px}
+.founder ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:4px 36px;margin-top:22px}
+.founder li{font-size:14px;color:var(--ink-2);padding:7px 0}
+.founder li::before{content:'◆';font-size:7px;vertical-align:2px;color:var(--accent);margin-right:11px}
+
+/* CONCIERGE */
+.concierge{background:var(--ink);color:var(--paper)}
+.concierge .eyebrow{color:var(--accent-2)}
+.concierge .eyebrow .num{color:var(--smoke)}
+.conc-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.conc-copy h2{font-size:clamp(28px,3.6vw,44px);color:var(--paper);margin-bottom:18px}
+.conc-copy p{color:var(--paper-3);margin-bottom:30px;max-width:460px}
+.conc-list{list-style:none;margin-bottom:34px}
+.conc-list li{padding:15px 0;border-top:1px solid rgba(246,242,233,.14);font-size:15px;color:var(--paper-3);display:flex;gap:15px;align-items:flex-start}
+.conc-list li::before{content:'◆';font-size:8px;color:var(--accent-2);margin-top:6px}
+.conc-visual{position:relative;aspect-ratio:4/4.6;border:1px solid var(--line-gold);overflow:hidden;background:var(--ink-2)}
+.conc-visual img{width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+.conc-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,transparent 45%,rgba(36,28,19,.6))}
+.conc-visual .cv-tag{position:absolute;left:26px;bottom:26px;z-index:2;font-family:var(--serif);font-size:16px;letter-spacing:.18em;text-transform:uppercase;color:var(--paper)}
+
+/* ACCESS LIST */
+.access-list{text-align:center}
+.access-list h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:14px}
+.access-list p{color:var(--smoke);max-width:520px;margin:0 auto 34px}
+.al-perks{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-bottom:40px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.al-perks span::before{content:'◆';font-size:7px;vertical-align:2px;margin-right:9px;color:var(--accent)}
+.al-form{display:flex;max-width:520px;margin:0 auto;border:1px solid var(--ink)}
+.al-form input{flex:1;background:transparent;border:none;outline:none;padding:16px 20px;color:var(--ink);font-family:var(--sans);font-size:14px}
+.al-form input::placeholder{color:var(--smoke)}
+.al-form button{border:none}
+
+/* TOUR */
+.tour{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.tour h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:18px}
+.tour p{color:var(--smoke);margin-bottom:28px}
+.tour-list{list-style:none;margin-bottom:34px}
+.tour-list li{padding:13px 0;border-top:1px solid var(--line-soft);font-size:15px;color:var(--ink-2)}
+.tour-list li::before{content:'—';color:var(--accent);margin-right:13px}
+.tour-visual{position:relative;aspect-ratio:4/4.4;overflow:hidden;border:1px solid var(--line);background:var(--ink)}
+.tour-visual img{width:100%;height:100%;object-fit:cover}
+.tour-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(36,28,19,.7))}
+.tour-visual .tv-mono{position:absolute;top:28px;left:28px;width:48px;height:48px;color:var(--paper);z-index:2}
+.tour-visual .tv-text{position:absolute;left:30px;right:30px;bottom:30px;z-index:2;font-family:var(--serif);font-size:19px;line-height:1.4;color:var(--paper)}
+
+/* APPLICATION */
+.apply{background:var(--ink);color:var(--paper)}
+.apply .eyebrow{color:var(--accent-2)}
+.apply .eyebrow .num{color:var(--smoke)}
+.apply h2{font-size:clamp(30px,4vw,46px);color:var(--paper)}
+.apply .lede{color:var(--paper-3)}
+.apply-frame{border:1px solid rgba(201,164,92,.4);background:var(--ink-2);padding:62px 60px 54px;position:relative}
+.apply-frame::before{content:'';position:absolute;inset:10px;border:1px solid rgba(201,164,92,.18);pointer-events:none}
+.apply-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(201,164,92,.28);padding-bottom:20px;margin-bottom:42px;flex-wrap:wrap;gap:10px}
+.apply-head .ah-title{font-family:var(--serif);font-size:19px;letter-spacing:.14em;text-transform:uppercase}
+.apply-head .ah-ref{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent-2)}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 44px}
+.f-field{display:flex;flex-direction:column}
+.f-field label,.f-group>label{font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--accent-2);margin-bottom:12px}
+.f-field label .req{color:#D89A6A}
+.f-field input{background:transparent;border:none;border-bottom:1px solid rgba(201,164,92,.4);padding:10px 2px;font-family:var(--sans);font-size:15px;color:var(--paper);outline:none;transition:border-color .25s}
+.f-field input:focus{border-bottom-color:var(--accent-2)}
+.f-field input::-webkit-calendar-picker-indicator{filter:invert(.7) sepia(.3)}
+.f-group{grid-column:1/-1;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chip span{display:inline-block;padding:11px 20px;border:1px solid rgba(201,164,92,.4);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-3);transition:all .25s;cursor:pointer;user-select:none}
+.chip input:checked + span{background:var(--accent-2);color:var(--ink);border-color:var(--accent-2)}
+.chip input:focus-visible + span{outline:2px solid var(--accent-2);outline-offset:2px}
+.apply-actions{grid-column:1/-1;margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.apply-actions .note{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke)}
+.apply .btn{border-color:var(--accent-2);color:var(--accent-2)}
+.apply .btn:hover,.apply .btn:focus-visible{background:var(--accent-2);color:var(--ink)}
+.form-confirm{display:none;text-align:center;padding:66px 30px}
+.form-confirm.show{display:block}
+.form-confirm h3{font-size:30px;margin-bottom:14px;color:var(--paper)}
+.form-confirm p{color:var(--paper-3);max-width:440px;margin:0 auto}
+.member-card{max-width:480px;margin:28px auto 0;border:1px solid var(--accent-2);background:linear-gradient(135deg,#30261A,#160F08);display:grid;grid-template-columns:1fr auto;gap:24px;padding:28px 30px;text-align:left;align-items:center;box-shadow:0 22px 50px rgba(0,0,0,.4)}
+.member-card .mark{color:var(--accent-2)}
+.mc-label{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--smoke);margin:18px 0 6px}
+.mc-id{font-family:var(--serif);font-size:25px;letter-spacing:.06em;color:var(--accent-2);line-height:1.1}
+.mc-name{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper-3);margin-top:8px}
+.mc-right{text-align:center}
+.mc-qr{background:var(--paper);padding:9px;display:inline-block;line-height:0}
+.mc-qr img,.mc-qr canvas{display:block;width:110px;height:110px}
+.mc-scan{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke);margin-top:8px}
+.mc-note{font-size:13px;letter-spacing:.05em;color:var(--accent-2);margin:24px auto 0;max-width:440px}
+.mc-save{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);margin-top:10px}
+@media(max-width:520px){.member-card{grid-template-columns:1fr;justify-items:center;text-align:center}.mc-left{text-align:center}}
+
+/* FOOTER */
+footer{background:var(--ink);color:var(--paper-3);padding:74px 0 48px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;margin-bottom:58px}
+.foot-grid h4{font-size:10.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--accent-2);margin-bottom:20px}
+.foot-grid ul{list-style:none}
+.foot-grid li{padding:5px 0;font-size:13.5px;color:var(--smoke)}
+.foot-grid a:hover{color:var(--accent-2)}
+.foot-brand .brand{color:var(--paper)}
+.foot-brand .brand .mark{color:var(--accent-2)}
+.foot-brand p{color:var(--smoke);font-size:13.5px;max-width:300px;margin-top:18px}
+.foot-base{border-top:1px solid rgba(246,242,233,.12);padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke)}
+
+/* ADMIN DASHBOARD */
+.admin-overlay{position:fixed;inset:0;z-index:1000;background:var(--paper);color:var(--ink);display:none;overflow-y:auto;font-family:var(--sans)}
+.admin-overlay.open{display:block}
+.admin-gate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px}
+.gate-card{width:340px;max-width:100%;text-align:center;border:1px solid var(--line);background:var(--paper);padding:44px 36px}
+.gate-card .mark{color:var(--brown);display:inline-block}
+.gate-card input{width:100%;padding:13px 14px;border:1px solid var(--line);background:transparent;font-family:var(--sans);font-size:15px;color:var(--ink);outline:none;text-align:center;letter-spacing:.2em}
+.gate-card input:focus{border-color:var(--accent)}
+.gate-err{display:none;color:#A0531F;font-size:12px;letter-spacing:.08em;margin-top:10px}
+.gate-back{display:inline-block;margin-top:20px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke);cursor:pointer}
+.gate-back:hover{color:var(--accent)}
+.admin-app{display:none;max-width:1280px;margin:0 auto;padding:30px 30px 70px}
+.admin-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:30px}
+.admin-brand{display:flex;align-items:center;gap:13px}
+.admin-brand .mark{color:var(--brown)}
+.admin-brand strong{font-family:var(--serif);font-weight:400;font-size:17px;letter-spacing:.18em;text-transform:uppercase;display:block}
+.admin-brand .ab-sub{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke)}
+.admin-top-actions{display:flex;gap:10px;flex-wrap:wrap}
+.abtn{cursor:pointer;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--line);background:transparent;color:var(--ink);transition:all .25s}
+.abtn:hover{border-color:var(--ink)}
+.abtn.solid{background:var(--ink);color:var(--accent-2);border-color:var(--ink)}
+.abtn.danger{color:#A0531F;border-color:rgba(160,83,31,.4)}
+.abtn.danger:hover{background:#A0531F;color:#fff;border-color:#A0531F}
+.admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:26px}
+.stat{border:1px solid var(--line-soft);background:var(--paper-2);padding:24px 26px}
+.stat .s-num{font-family:var(--serif);font-size:38px;display:block;line-height:1;color:var(--ink)}
+.stat .s-lab{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke);margin-top:10px;display:block}
+.admin-toolbar{margin-bottom:14px}
+.admin-toolbar input{width:100%;max-width:420px;padding:13px 16px;border:1px solid var(--line);background:transparent;font-family:var(--sans);font-size:14px;color:var(--ink);outline:none}
+.admin-toolbar input:focus{border-color:var(--accent)}
+.admin-note{font-size:11.5px;letter-spacing:.03em;color:var(--smoke);background:var(--paper-3);border-left:2px solid var(--accent);padding:11px 16px;margin-bottom:22px;line-height:1.5}
+.admin-subhead{font-family:var(--serif);font-size:21px;margin:46px 0 16px;display:flex;align-items:center;gap:14px}
+.admin-subhead .abtn{margin-left:auto;font-family:var(--sans)}
+.admin-table-wrap{overflow-x:auto;border:1px solid var(--line-soft)}
+.admin-table{width:100%;border-collapse:collapse;min-width:920px;font-size:13.5px}
+.admin-table th{text-align:left;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);padding:14px 16px;background:var(--paper-2);border-bottom:1px solid var(--line-soft);white-space:nowrap}
+.admin-table td{padding:14px 16px;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--ink-2)}
+.admin-table tr:last-child td{border-bottom:none}
+.admin-table td.mono{font-family:monospace;font-size:11.5px;color:var(--accent);white-space:nowrap}
+.admin-table .sub{font-size:11px;color:var(--smoke);margin-top:3px}
+.admin-table td.empty{text-align:center;color:var(--smoke);padding:50px;font-size:14px}
+.admin-table a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line)}
+.st{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:7px 8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
+.del{cursor:pointer;background:none;border:none;color:var(--smoke);font-size:14px;padding:4px 8px}
+.del:hover{color:#A0531F}
+.row-actions{white-space:nowrap}
+.rbtn{cursor:pointer;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--line);background:transparent;margin-right:6px}
+.rbtn.approve{color:#3B7A3B;border-color:rgba(59,122,59,.45)}
+.rbtn.approve:hover{background:#3B7A3B;color:#fff;border-color:#3B7A3B}
+.rbtn.reject{color:#A0531F;border-color:rgba(160,83,31,.45)}
+.rbtn.reject:hover{background:#A0531F;color:#fff;border-color:#A0531F}
+.email-tools{display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:start}
+.email-recipients{border:1px solid var(--line-soft);padding:18px}
+.er-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line-soft);padding-bottom:12px;margin-bottom:10px}
+.er-all{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:8px;cursor:pointer}
+.er-count{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--smoke)}
+.er-list{max-height:320px;overflow-y:auto}
+.er-item{display:flex;align-items:flex-start;gap:10px;padding:9px 4px;border-bottom:1px solid var(--line-soft);font-size:13px;cursor:pointer;color:var(--ink-2)}
+.er-item:last-child{border-bottom:none}
+.er-item strong{font-weight:600}
+.er-item em{font-style:normal;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-left:4px}
+.email-compose label{display:block;font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke);margin:0 0 8px}
+.email-compose input,.email-compose textarea{width:100%;border:1px solid var(--line);background:transparent;padding:12px 14px;font-family:var(--sans);font-size:14px;color:var(--ink);outline:none;margin-bottom:18px;resize:vertical}
+.email-compose input:focus,.email-compose textarea:focus{border-color:var(--accent)}
+.email-actions{display:flex;justify-content:space-between;align-items:center;gap:16px}
+@media(max-width:760px){.email-tools{grid-template-columns:1fr}}
+.email-preview{display:none;border:1px solid var(--accent);background:var(--paper);margin-top:16px}
+.email-preview.show{display:block}
+.ep-head{display:flex;justify-content:space-between;align-items:center;background:var(--paper-2);padding:10px 16px;border-bottom:1px solid var(--line-soft);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--smoke)}
+.ep-head b{color:var(--ink);font-weight:600}
+.ep-close{background:none;border:none;cursor:pointer;color:var(--smoke);font-size:13px}
+.ep-close:hover{color:#A0531F}
+.ep-subj{font-family:var(--serif);font-size:18px;color:var(--ink);padding:16px 18px 0}
+.ep-body{padding:10px 18px 18px;font-size:14px;color:var(--ink-2);line-height:1.6;white-space:pre-wrap}
+.analytics-week{margin-bottom:30px}
+.aw-title{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke);margin-bottom:12px}
+.aw-bars{display:flex;gap:10px;align-items:flex-end;height:130px;border:1px solid var(--line-soft);background:var(--paper-2);padding:22px 16px 16px}
+.aw-col{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}
+.aw-bar{width:100%;max-width:46px;background:var(--accent);position:relative;min-height:4px;transition:height .4s}
+.aw-bar span{position:absolute;top:-18px;left:0;right:0;text-align:center;font-size:11px;color:var(--ink)}
+.aw-day{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--smoke);margin-top:8px}
+.social-ig{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(201,164,92,.4);color:var(--accent-2);margin-top:18px;transition:all .25s}
+.social-ig:hover{background:var(--accent-2);color:var(--ink);border-color:var(--accent-2)}
+.social-ig svg{width:20px;height:20px}
+.insta-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.insta-tile{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--ink);display:block}
+.insta-tile img{width:100%;height:100%;object-fit:cover;filter:saturate(.92);transition:transform .6s,filter .3s}
+.insta-tile:hover img{transform:scale(1.08);filter:saturate(1)}
+.insta-tile::after{content:'';position:absolute;inset:0;background:rgba(36,28,19,0);transition:background .3s}
+.insta-tile:hover::after{background:rgba(36,28,19,.4)}
+.insta-tile .ig-ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--paper);opacity:0;transition:opacity .3s;z-index:2}
+.insta-tile .ig-ov svg{width:26px;height:26px}
+.insta-tile:hover .ig-ov{opacity:1}
+@media(max-width:900px){.insta-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.insta-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* EVENT SUB-PAGES */
+.event-overlay{position:fixed;inset:0;z-index:1000;background:var(--paper);color:var(--ink);display:none;overflow-y:auto}
+.event-overlay.open{display:block}
+.event-hero{position:relative;min-height:52vh;display:flex;align-items:flex-end;background:var(--ink);overflow:hidden}
+.event-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.event-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,28,19,.45) 0%,rgba(36,28,19,.88) 100%)}
+.event-hero-inner{position:relative;z-index:2;max-width:1180px;margin:0 auto;width:100%;padding:50px 32px;color:var(--paper)}
+.ev-back{display:inline-block;margin-bottom:26px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-2);cursor:pointer}
+.ev-back:hover{color:var(--paper)}
+.ev-cat{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent-2);margin-bottom:14px}
+.event-hero h1{font-size:clamp(34px,5vw,60px);color:var(--paper);margin-bottom:16px}
+.ev-meta{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-3)}
+.event-body{max-width:1180px;margin:0 auto;padding:70px 32px 90px}
+.ev-cols{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:start}
+.ev-about .eyebrow{margin-bottom:18px}
+.ev-about #evBody{color:var(--smoke);font-size:16.5px;margin-bottom:28px}
+.ev-points{list-style:none}
+.ev-points li{padding:13px 0;border-top:1px solid var(--line-soft);font-size:15px;color:var(--ink-2)}
+.ev-points li::before{content:'—';color:var(--accent);margin-right:13px}
+.ev-reg-card{border:1px solid var(--line);background:var(--paper-2);padding:38px 34px;position:sticky;top:30px}
+.ev-reg-card h3{font-size:24px;margin:6px 0 24px}
+.ev-reg-card .ef{display:flex;flex-direction:column;margin-bottom:20px}
+.ev-reg-card label{font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.ev-reg-card input,.ev-reg-card select,.ev-reg-card textarea{background:transparent;border:none;border-bottom:1px solid var(--line);padding:9px 2px;font-family:var(--sans);font-size:15px;color:var(--ink);outline:none;resize:vertical}
+.ev-reg-card input:focus,.ev-reg-card select:focus,.ev-reg-card textarea:focus{border-bottom-color:var(--accent)}
+.ev-reg-card .btn{width:100%;margin-top:6px}
+.ev-confirm{display:none;text-align:center;padding:14px 0}
+.ev-confirm.show{display:block}
+.ev-confirm h3{font-size:22px;margin:0 0 10px}
+.ev-confirm p{color:var(--smoke);font-size:14px}
+
+/* MEMBER PORTAL */
+.member-overlay{position:fixed;inset:0;z-index:1001;background:var(--paper);color:var(--ink);display:none;overflow-y:auto;font-family:var(--sans)}
+.member-overlay.open{display:block}
+.mp-gate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:30px}
+.mp-gate .gate-card input{text-align:center}
+.mp-app{display:none;max-width:940px;margin:0 auto;padding:40px 30px 80px}
+.mp-grid{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start;margin-top:6px}
+.mp-detail .row{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-top:1px solid var(--line-soft);font-size:14px}
+.mp-detail .row:first-child{border-top:none}
+.mp-detail .k{color:var(--smoke);letter-spacing:.03em}
+.mp-detail .v{color:var(--ink);text-align:right}
+.mp-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--accent);color:var(--accent)}
+.mp-sec-title{font-family:var(--serif);font-size:21px;margin:46px 0 16px}
+.mp-events{list-style:none}
+.mp-events li{border:1px solid var(--line-soft);padding:16px 18px;margin-bottom:10px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.mp-ev-name{font-family:var(--serif);font-size:16px}
+.mp-ev-sub{font-size:12px;color:var(--smoke);margin-top:3px}
+.mp-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+@media(max-width:760px){.mp-grid{grid-template-columns:1fr}.mp-app{padding:30px 18px 60px}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+
+/* RESPONSIVE */
+@media (max-width:1040px){.clubs-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .hero-copy{padding:40px 0 60px;order:2}
+  .hero-copy .inner{padding-left:0;margin:0 auto}
+  .hero-media{order:1;min-height:54vh}
+  .tiers{grid-template-columns:1fr}
+  .duo{grid-template-columns:1fr}
+  .conc-grid{grid-template-columns:1fr;gap:38px}
+  .conc-visual{aspect-ratio:16/11}
+  .flex-access{grid-template-columns:1fr;padding:48px 34px}
+  .tour{grid-template-columns:1fr;gap:42px}
+  .founder{grid-template-columns:1fr;gap:34px;padding:48px 34px}
+  .founder ul{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .f-grid{grid-template-columns:1fr}
+  .apply-frame{padding:42px 26px}
+  .ev-cols{grid-template-columns:1fr;gap:40px}
+  .ev-reg-card{position:static}
+}
+@media (max-width:840px){
+  .nav-links{position:fixed;top:74px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line-soft);flex-direction:column;gap:0;padding:10px 0 24px;display:none}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%;text-align:center}
+  .nav-links a{display:block;padding:13px}
+  .nav-toggle{display:block}
+  .nav-cta{display:none}
+  .section-pad{padding:72px 0}
+  .wrap{padding:0 22px}
+  .clubs-grid{grid-template-columns:1fr}
+  .events-grid{grid-template-columns:1fr}
+  .exp-points div{border-left:none;padding:8px 0}
+  .al-form{flex-direction:column;border:none;gap:14px}
+  .al-form input{border:1px solid var(--ink)}
+  .al-form button{border:1px solid var(--ink)}
+}
+@media(max-width:760px){.admin-stats{grid-template-columns:1fr 1fr}.admin-app{padding:24px 18px 60px}}
+</style>
+</head>
+<body>
+
+<!-- LOGO MARK -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="sb-mark">
+      <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="miter">
+        <g transform="rotate(45 50 50)">
+          <rect x="21" y="21" width="30" height="30"/>
+          <rect x="49" y="21" width="30" height="30"/>
+          <rect x="21" y="49" width="30" height="30"/>
+          <rect x="49" y="49" width="30" height="30"/>
+          <rect x="29" y="29" width="14" height="14"/>
+          <rect x="57" y="29" width="14" height="14"/>
+          <rect x="29" y="57" width="14" height="14"/>
+          <rect x="57" y="57" width="14" height="14"/>
+        </g>
+      </g>
+    </g>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="brand" href="#home" aria-label="Soho Boulevard home">
+      <span class="mark"><svg viewBox="0 0 100 100" width="34" height="34"><use href="#sb-mark"/></svg></span>
+      <span class="brand-name">Soho&nbsp;Boulevard</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav(this)">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="#clubs">Clubs</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#social">Social</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#concierge">Concierge</a></li>
+      <li><a href="#tour">Visit</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#member" onclick="openMember();return false;">Members</a></li>
+    </ul>
+    <a href="#apply" class="btn btn-sm nav-cta">Register Your Interest</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-copy">
+    <div class="inner">
+      <p class="est">Maitama, Abuja &nbsp;·&nbsp; <b>By Application Only</b></p>
+      <h1>An Exclusive Social &amp; <em>Wellness Club.</em></h1>
+      <p class="sub">A private home for the people who shape the city — where connection, performance and recovery live under one roof.</p>
+      <div class="hero-cta">
+        <a href="#apply" class="btn btn-solid">Register Your Interest</a>
+        <a href="#clubs" class="btn">Explore the Clubs</a>
+      </div>
+      <p class="hero-note">Application Required <span>◆</span> Limited Membership</p>
+    </div>
+  </div>
+  <div class="hero-media">
+    <img src="https://loremflickr.com/1100/1400/luxury,lounge,interior?lock=11" alt="Soho Boulevard members' lounge">
+    <span class="frame" aria-hidden="true"></span>
+    <span class="badge">Soho Boulevard<small>Est. Abuja</small></span>
+  </div>
+</header>
+
+<!-- MEMBERSHIP -->
+<section class="section-pad" id="membership">
+  <div class="wrap reveal">
+    <div class="article-head"><p class="eyebrow"><span class="num">Article I</span>Membership</p></div>
+    <h2 class="serif h2-big">Three Degrees of Access.</h2>
+    <p class="lede">Membership of Soho Boulevard is granted, not purchased. Each tier opens a deeper layer of the club — and each is held by a limited number of people at any time.</p>
+    <div class="tiers">
+      <article class="tier">
+        <p class="t-index">Entry Tier</p><h3>First Access</h3><p class="t-sub">The Introduction</p>
+        <ul><li>Early access to events</li><li>Limited club &amp; space access</li><li>Selected wellness sessions</li><li>Access to book facilities</li></ul>
+      </article>
+      <article class="tier">
+        <p class="t-index">Second Tier</p><h3>Executive Access</h3><p class="t-sub">The Inner Circuit</p>
+        <ul><li>Priority event access</li><li>Extended club access</li><li>All club memberships, preferential</li><li>Curated networking &amp; training invitations</li></ul>
+      </article>
+      <article class="tier tier-prive">
+        <span class="tier-badge">Most Selective</span>
+        <p class="t-index">Higher Tier</p><h3>Echelon Privé</h3><p class="t-sub">The Full Estate</p>
+        <ul><li>Full access to all spaces &amp; clubs</li><li>Private, invite-only experiences</li><li>Priority booking across all facilities</li><li>Premium wellness &amp; performance offerings</li><li>Complimentary or priority 1-on-1 coaching</li></ul>
+      </article>
+    </div>
+    <div class="tier-footnote"><span>Application Required</span><span>Limited Membership</span><span>Admission by Review</span></div>
+  </div>
+</section>
+
+<!-- CLUBS -->
+<section class="section-pad" id="clubs" style="background:var(--paper-2)">
+  <div class="wrap reveal">
+    <div class="article-head"><p class="eyebrow"><span class="num">Article II</span>Club Memberships</p></div>
+    <h2 class="serif h2-big">Specialized Clubs. Structured Excellence.</h2>
+    <p class="lede">Each club is a premium layer within the Soho ecosystem — its own community, calendar and coaching pathway, housed under one roof.</p>
+    <div class="clubs-grid">
+      <article class="club"><div class="club-img"><img src="https://loremflickr.com/700/440/badminton,court?lock=21" alt="Badminton court"><span class="c-tag">Racquet · Court Sport</span></div><div class="club-body"><h3>Badminton Club</h3><ul><li>Private court access</li><li>Social &amp; competitive play</li><li>Community tournaments</li><li>Optional 1-on-1 coaching</li></ul></div></article>
+      <article class="club"><div class="club-img"><img src="https://loremflickr.com/700/440/padel,tennis?lock=22" alt="Padel court"><span class="c-tag">Racquet · Court Sport</span></div><div class="club-body"><h3>Padel Club</h3><ul><li>Premium padel court access</li><li>League play &amp; tournaments</li><li>Priority booking</li><li>Optional private coaching</li></ul></div></article>
+      <article class="club"><div class="club-img"><img src="https://loremflickr.com/700/440/gym,training?lock=23" alt="High intensity training"><span class="c-tag">Strength · Conditioning</span></div><div class="club-body"><h3>High Intensity Training</h3><ul><li>Structured group sessions</li><li>Strength &amp; conditioning programs</li><li>Performance-focused training</li><li>1-on-1 personal coaching</li></ul></div></article>
+      <article class="club"><div class="club-img"><img src="https://loremflickr.com/700/440/running,city?lock=24" alt="Run club"><span class="c-tag">Endurance · Community</span></div><div class="club-body"><h3>Mile Haus Run Club</h3><ul><li>Guided run schedules</li><li>Community runs</li><li>Endurance &amp; performance tracking</li><li>Optional run coaching</li></ul></div></article>
+      <article class="club" id="wellness"><div class="club-img"><img src="https://loremflickr.com/700/440/yoga,studio?lock=25" alt="Pilates and yoga"><span class="c-tag">Recovery · Balance</span></div><div class="club-body"><h3>Pilates &amp; Yoga</h3><ul><li>Guided classes, all levels</li><li>Recovery &amp; flexibility focus</li><li>Mindfulness sessions</li><li>Private 1-on-1 sessions</li></ul></div></article>
+      <article class="club"><div class="club-img"><img src="https://loremflickr.com/700/440/spa,wellness?lock=26" alt="Recovery suite"><span class="c-tag">Restore · Longevity</span></div><div class="club-body"><h3>Recovery Suite</h3><ul><li>Sauna &amp; cold therapy</li><li>Recovery &amp; longevity focus</li><li>Post-training restoration</li><li>By appointment</li></ul></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING EVENTS -->
+<section class="section-pad" id="events">
+  <div class="wrap reveal">
+    <div class="article-head"><p class="eyebrow"><span class="num">Article III</span>Upcoming Events</p></div>
+    <h2 class="serif h2-big">What's On at the Boulevard.</h2>
+    <p class="lede">From sundown sets to match-day screenings — a calendar built for the Soho crowd. Tap any event to view details and register your interest.</p>
+    <div class="events-grid">
+      <a class="event-card" href="#event=ibiza-night">
+        <img src="https://loremflickr.com/800/600/ibiza,party,dj?lock=61" alt="Ibiza Night">
+        <span class="ec-tag">Register Interest</span>
+        <div class="ec-body">
+          <p class="ec-date">Date to be announced</p>
+          <p class="ec-cat">Social · Music</p>
+          <h3>Ibiza Night</h3>
+          <p>Balearic house, sundown sets and an open-air crowd — the Boulevard after dark.</p>
+          <span class="ec-link">View &amp; Register</span>
+        </div>
+      </a>
+      <a class="event-card" href="#event=world-cup">
+        <img src="https://loremflickr.com/800/600/football,stadium,fans?lock=62" alt="World Cup Live Stream">
+        <span class="ec-tag">Register Interest</span>
+        <div class="ec-body">
+          <p class="ec-date">Match days · Live</p>
+          <p class="ec-cat">Screening · Match Day</p>
+          <h3>World Cup Live Stream</h3>
+          <p>Every match on the big screen, full bar and the best seats in Maitama.</p>
+          <span class="ec-link">View &amp; Register</span>
+        </div>
+      </a>
+      <a class="event-card" href="#event=padel-open">
+        <img src="https://loremflickr.com/800/600/padel,sport?lock=63" alt="Padel Open Day">
+        <span class="ec-tag">Placeholder</span>
+        <div class="ec-body">
+          <p class="ec-date">Coming soon</p>
+          <p class="ec-cat">Sport · Community</p>
+          <h3>Padel Open Day</h3>
+          <p>An open invitation to play, watch and meet the padel community. Details soon.</p>
+          <span class="ec-link">View &amp; Register</span>
+        </div>
+      </a>
+      <a class="event-card" href="#event=summer-social">
+        <img src="https://loremflickr.com/800/600/rooftop,cocktail,sunset?lock=64" alt="Summer Rooftop Social">
+        <span class="ec-tag">Placeholder</span>
+        <div class="ec-body">
+          <p class="ec-date">Coming soon</p>
+          <p class="ec-cat">Private · Social</p>
+          <h3>Summer Rooftop Social</h3>
+          <p>An evening of music, drinks and connection on the rooftop. Details soon.</p>
+          <span class="ec-link">View &amp; Register</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FLEXIBLE ACCESS -->
+<section class="section-pad" id="book">
+  <div class="wrap reveal">
+    <div class="flex-access">
+      <div>
+        <p class="eyebrow" style="margin-bottom:20px"><span class="num">Article IV</span>Flexible Access</p>
+        <h2>Access On Your Terms.</h2>
+        <p>Not ready to commit? The Boulevard opens its doors by the hour. Members and non-members alike can reserve courts, training spaces and wellness areas — a first taste of the Soho experience, on your schedule.</p>
+        <a href="#apply" class="btn" style="margin-top:14px">Request Entry</a>
+      </div>
+      <div>
+        <ul class="fa-points"><li>Book facilities hourly — members &amp; non-members</li><li>Courts, training spaces &amp; wellness areas</li><li>Ideal for first-time users &amp; flexible lifestyles</li></ul>
+        <p class="fa-terms"><span>Subject to availability</span><span>Priority given to members</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL & WELLNESS -->
+<section class="section-pad" id="social">
+  <div class="wrap reveal">
+    <div class="article-head"><p class="eyebrow"><span class="num">Article V</span>Social &amp; Wellness</p></div>
+    <h2 class="serif h2-big">Two Currents. One Standard.</h2>
+    <p class="lede">The Boulevard runs on two intertwined rhythms — the social calendar that connects you, and the wellness ecosystem that sustains you.</p>
+    <div class="duo">
+      <div class="duo-col" id="social-calendar">
+        <img src="https://loremflickr.com/800/700/cocktail,bar,lounge?lock=31" alt="Social events">
+        <div class="duo-body"><h3>Social</h3><p class="d-sub">The Calendar</p><ul><li>Curated events &amp; gatherings</li><li>Match-day experiences — Arsenal screenings &amp; more</li><li>High-value networking</li><li>Cultural moments</li></ul></div>
+      </div>
+      <div class="duo-col">
+        <img src="https://loremflickr.com/800/700/spa,wellness,sauna?lock=32" alt="Wellness ecosystem">
+        <div class="duo-body"><h3>Wellness</h3><p class="d-sub">The Ecosystem</p><ul><li>Structured fitness ecosystem</li><li>Recovery &amp; longevity focus</li><li>Mental &amp; physical balance</li><li>Performance-driven environment</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section-pad experience" id="experience">
+  <img src="https://loremflickr.com/1600/900/modern,architecture,interior?lock=41" alt="The Boulevard space">
+  <div class="wrap reveal">
+    <p class="eyebrow" style="margin-bottom:32px;color:var(--accent-2)"><span class="num" style="color:var(--paper-3)">Article VI</span>The Space</p>
+    <blockquote>"More than a club — <em>a lifestyle infrastructure.</em>"</blockquote>
+    <p>A premium, design-led environment in the heart of Maitama — built as a hub for connection, performance and recovery.</p>
+    <div class="exp-points"><div>Design-Led Environment</div><div>Connection</div><div>Performance</div><div>Recovery</div></div>
+  </div>
+</section>
+
+<!-- FOUNDER MEMBERS -->
+<section class="section-pad">
+  <div class="wrap reveal">
+    <div class="founder">
+      <div class="founder-card" aria-hidden="true">
+        <div class="fc-top"><span class="fc-mono"><svg viewBox="0 0 100 100" width="26" height="26"><use href="#sb-mark"/></svg></span><span class="fc-no">Nº 001</span></div>
+        <div><p class="fc-name">Founder Member</p><p class="fc-line">Soho Boulevard · Abuja</p></div>
+      </div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:18px"><span class="num">Article VII</span>Founder Members</p>
+        <h2>The First Names on the Register.</h2>
+        <ul><li>Founder Members Card</li><li>Limited early access</li><li>Lifetime recognition</li><li>Elevated status within the community</li><li>Priority access to all experiences</li></ul>
+      </div>
+      <a href="#apply" class="btn">Apply for Access</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONCIERGE -->
+<section class="section-pad concierge" id="concierge">
+  <div class="wrap reveal">
+    <div class="conc-grid">
+      <div class="conc-copy">
+        <p class="eyebrow" style="margin-bottom:18px"><span class="num">Article VIII</span>The Concierge</p>
+        <h2>One Call. Everything Handled.</h2>
+        <p>Every member is paired with a dedicated concierge — your single point of contact for the club and beyond. From a last-minute court to a private celebration, consider it arranged.</p>
+        <ul class="conc-list">
+          <li>Court &amp; class reservations, handled for you</li>
+          <li>Priority event &amp; match-day access</li>
+          <li>Guest passes &amp; private bookings</li>
+          <li>Personal training &amp; coaching scheduled around you</li>
+          <li>Dining &amp; lounge reservations</li>
+          <li>Celebrations &amp; special requests</li>
+          <li>A dedicated point of contact, on call</li>
+        </ul>
+        <a href="#apply" class="btn btn-light">Speak to the Concierge</a>
+      </div>
+      <div class="conc-visual"><img src="https://loremflickr.com/800/920/luxury,hotel,concierge?lock=51" alt="The Soho Boulevard concierge"><span class="cv-tag">At Your Service</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS LIST -->
+<section class="section-pad access-list" style="background:var(--paper-2)">
+  <div class="wrap reveal">
+    <p class="eyebrow" style="margin-bottom:24px">The Access List</p>
+    <h2>Get Access Before Everyone Else.</h2>
+    <p>Join the list and hear first — before doors open, before bookings fill.</p>
+    <div class="al-perks"><span>Private Invites</span><span>Club Updates</span><span>Match Alerts — Arsenal &amp; More</span><span>Early Booking Access</span></div>
+    <form class="al-form" onsubmit="return alSubmit(event)">
+      <input type="email" placeholder="Your email address" required aria-label="Email address">
+      <button class="btn btn-solid" type="submit">Sign Up Now</button>
+    </form>
+    <p id="alMsg" style="margin-top:18px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:none">You're on the list. Watch your inbox.</p>
+  </div>
+</section>
+
+<!-- BOOK A TOUR -->
+<section class="section-pad" id="tour">
+  <div class="wrap reveal">
+    <div class="tour">
+      <div>
+        <p class="eyebrow" style="margin-bottom:20px"><span class="num">Article IX</span>Book a Tour</p>
+        <h2>Experience Soho Before You Join.</h2>
+        <p>Walk the Boulevard. See the courts, the training floors, the spaces in between — and meet the people already inside.</p>
+        <ul class="tour-list"><li>Book a private tour</li><li>Explore the facilities</li><li>Meet the community</li></ul>
+        <a href="#apply" class="btn">Request a Private Tour</a>
+      </div>
+      <div class="tour-visual">
+        <img src="https://loremflickr.com/800/900/design,interior,lounge?lock=42" alt="Inside Soho Boulevard">
+        <span class="tv-mono" aria-hidden="true"><svg viewBox="0 0 100 100" width="48" height="48"><use href="#sb-mark"/></svg></span>
+        <p class="tv-text">"A curated system for how ambitious people in Abuja live, connect and perform."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+<section class="apply section-pad" id="apply">
+  <div class="wrap reveal">
+    <div class="article-head"><p class="eyebrow"><span class="num">The Register</span>Application for Access</p></div>
+    <h2 style="margin-bottom:18px">Request Entry.</h2>
+    <p class="lede">Membership is reviewed, not sold. Complete the register below and our membership team will be in touch.</p>
+    <div class="apply-frame">
+      <div class="apply-head"><span class="ah-title">Soho Boulevard — Membership Register</span><span class="ah-ref">Strictly Confidential</span></div>
+      <form class="f-grid" id="applyForm" onsubmit="return applySubmit(event)">
+        <div class="f-field"><label for="fName">Full Name <span class="req">*</span></label><input id="fName" type="text" name="name" required autocomplete="name"></div>
+        <div class="f-field"><label for="fEmail">Email Address <span class="req">*</span></label><input id="fEmail" type="email" name="email" required autocomplete="email"></div>
+        <div class="f-field"><label for="fPhone">Phone Number <span class="req">*</span></label><input id="fPhone" type="tel" name="phone" required autocomplete="tel"></div>
+        <div class="f-field"><label for="fBday">Date of Birth <span class="req">*</span></label><input id="fBday" type="date" name="birthday" required></div>
+        <div class="f-group"><label>Primary Interest</label><div class="chips">
+          <label class="chip"><input type="checkbox" name="interest" value="Social"><span>Social</span></label>
+          <label class="chip"><input type="checkbox" name="interest" value="Wellness"><span>Wellness</span></label>
+        </div></div>
+        <div class="f-group"><label>Club Interests — select any</label><div class="chips">
+          <label class="chip"><input type="checkbox" name="clubs" value="Badminton"><span>Badminton</span></label>
+          <label class="chip"><input type="checkbox" name="clubs" value="Padel"><span>Padel</span></label>
+          <label class="chip"><input type="checkbox" name="clubs" value="High Intensity Training"><span>High Intensity Training</span></label>
+          <label class="chip"><input type="checkbox" name="clubs" value="Mile Haus Run Club"><span>Mile Haus Run Club</span></label>
+          <label class="chip"><input type="checkbox" name="clubs" value="Pilates & Yoga"><span>Pilates &amp; Yoga</span></label>
+        </div></div>
+        <div class="f-group"><label>Preferred Membership Tier</label><div class="chips">
+          <label class="chip"><input type="radio" name="tier" value="First Access"><span>First Access</span></label>
+          <label class="chip"><input type="radio" name="tier" value="Executive Access"><span>Executive Access</span></label>
+          <label class="chip"><input type="radio" name="tier" value="Echelon Privé"><span>Echelon Privé</span></label>
+        </div></div>
+        <div class="f-group"><label>Interested In</label><div class="chips">
+          <label class="chip"><input type="checkbox" name="interestedIn" value="Membership"><span>Membership</span></label>
+          <label class="chip"><input type="checkbox" name="interestedIn" value="Hourly Booking"><span>Hourly Booking</span></label>
+          <label class="chip"><input type="checkbox" name="interestedIn" value="1-on-1 Coaching"><span>1-on-1 Coaching</span></label>
+          <label class="chip"><input type="checkbox" name="interestedIn" value="Events"><span>Events</span></label>
+        </div></div>
+        <div class="apply-actions"><p class="note">Limited places · Applications reviewed in order received</p><button class="btn" type="submit">Apply for Access</button></div>
+      </form>
+      <div class="form-confirm" id="formConfirm">
+        <p class="eyebrow" style="margin-bottom:18px">Membership Confirmed</p>
+        <h3 class="serif" style="margin-bottom:8px">Welcome to Soho Boulevard.</h3>
+        <p>Your membership has been created and your Member ID issued.</p>
+        <div class="member-card">
+          <div class="mc-left">
+            <span class="mark"><svg viewBox="0 0 100 100" width="30" height="30"><use href="#sb-mark"/></svg></span>
+            <p class="mc-label">Member ID</p>
+            <p class="mc-id" id="mcId">—</p>
+            <p class="mc-name" id="mcName">—</p>
+          </div>
+          <div class="mc-right">
+            <div class="mc-qr" id="mcQr"></div>
+            <p class="mc-scan">Scan for access</p>
+          </div>
+        </div>
+        <p class="mc-note">Present this QR code or your Member ID at Soho Boulevard for access.</p>
+        <div style="margin-top:18px"><button class="btn btn-solid" type="button" onclick="downloadCard()">Download Card</button></div>
+        <p class="mc-save">Download or screenshot to keep your membership card.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- INSTAGRAM -->
+<section class="section-pad insta" id="instagram">
+  <div class="wrap reveal">
+    <div class="insta-head">
+      <div>
+        <p class="eyebrow">Follow Along</p>
+        <h2 class="serif h2-big" style="margin-bottom:6px">@soho.boulevard</h2>
+        <p style="color:var(--smoke)">Inside the Boulevard — events, courts, and the moments in between.</p>
+      </div>
+      <a class="btn" href="https://www.instagram.com/soho.boulevard/" target="_blank" rel="noopener">Follow on Instagram</a>
+    </div>
+    <div id="instaWidget"></div>
+    <div class="insta-grid" id="instaFallback">
+      <a class="insta-tile" href="https://www.instagram.com/soho.boulevard/" target="_blank" rel="noopener"><img src="https://loremflickr.com/400/400/lounge,club?lock=71" alt="Instagram post"><span class="ig-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="insta-tile" href="https://www.instagram.com/soho.boulevard/" target="_blank" rel="noopener"><img src="https://loremflickr.com/400/400/padel,sport?lock=72" alt="Instagram post"><span class="ig-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="insta-tile" href="https://www.instagram.com/soho.boulevard/" target="_blank" rel="noopener"><img src="https://loremflickr.com/400/400/cocktail,bar?lock=73" alt="Instagram post"><span class="ig-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="insta-tile" href="https://www.instagram.com/soho.boulevard/" target="_blank" rel="noopener"><img src="https://loremflickr.com/400/400/gym,training?lock=74" alt="Instagram post"><span class="ig-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="insta-tile" href="https://www.instagram.com/soho.boulevard/" target="_blank" rel="noopener"><img src="https://loremflickr.com/400/400/rooftop,night?lock=75" alt="Instagram post"><span class="ig-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      <a class="insta-tile" href="https://www.instagram.com/soho.boulevard/" target="_blank" rel="noopener"><img src="https://loremflickr.com/400/400/yoga,studio?lock=76" alt="Instagram post"><span class="ig-ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#home"><span class="mark"><svg viewBox="0 0 100 100" width="34" height="34"><use href="#sb-mark"/></svg></span><span class="brand-name">Soho&nbsp;Boulevard</span></a>
+        <p>An exclusive social &amp; wellness club in the heart of Maitama, Abuja.</p>
+        <a class="social-ig" href="https://www.instagram.com/soho.boulevard/" target="_blank" rel="noopener" aria-label="Instagram — @soho.boulevard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+      <div><h4>The Club</h4><ul><li><a href="#membership">Membership</a></li><li><a href="#clubs">Clubs</a></li><li><a href="#experience">Experience</a></li><li><a href="#events">Events</a></li></ul></div>
+      <div><h4>Access</h4><ul><li><a href="#apply">Apply for Access</a></li><li><a href="#book">Hourly Booking</a></li><li><a href="#tour">Book a Tour</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>Maitama, Abuja, Nigeria</li><li><a href="mailto:members@sohoboulevard.com">members@sohoboulevard.com</a></li><li><a href="tel:+234">+234 (0) 000 000 0000</a></li></ul></div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Soho Boulevard. All rights reserved.</span>
+      <span><a href="#admin" onclick="openAdmin();return false;" style="color:var(--smoke)">Admin</a> &nbsp;·&nbsp; By Application Only</span>
+    </div>
+  </div>
+</footer>
+
+<!-- EVENT SUB-PAGE -->
+<div class="event-overlay" id="eventOverlay" aria-hidden="true">
+  <div class="event-hero">
+    <img id="evImg" src="" alt="">
+    <div class="event-hero-inner">
+      <span class="ev-back" onclick="closeEvent()">← All Events</span>
+      <p class="ev-cat" id="evCat"></p>
+      <h1 id="evTitle"></h1>
+      <p class="ev-meta"><span id="evDate"></span> &nbsp;·&nbsp; <span id="evLoc"></span></p>
+    </div>
+  </div>
+  <div class="event-body">
+    <div class="ev-cols">
+      <div class="ev-about">
+        <p class="eyebrow">About the Event</p>
+        <p id="evBody"></p>
+        <ul class="ev-points" id="evPoints"></ul>
+      </div>
+      <div>
+        <div class="ev-reg-card">
+          <p class="eyebrow">Register Your Interest</p>
+          <h3 id="evRegTitle">Save your place.</h3>
+          <form id="eventForm" onsubmit="return eventSubmit(event)">
+            <div class="ef"><label>Full Name *</label><input type="text" name="name" required></div>
+            <div class="ef"><label>Email Address *</label><input type="email" name="email" required></div>
+            <div class="ef"><label>Phone Number *</label><input type="tel" name="phone" required></div>
+            <div class="ef"><label>Number of Guests</label>
+              <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+            </div>
+            <div class="ef"><label>Note (optional)</label><textarea name="note" rows="2" placeholder="Anything we should know?"></textarea></div>
+            <button class="btn btn-solid" type="submit">Register Your Interest</button>
+          </form>
+          <div class="ev-confirm" id="evConfirm">
+            <p class="eyebrow" style="margin-bottom:14px">You're on the list</p>
+            <h3 class="serif">Interest registered.</h3>
+            <p>We'll be in touch with details and confirmation closer to the date.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MEMBER PORTAL -->
+<div class="member-overlay" id="memberOverlay" aria-hidden="true">
+  <div class="mp-gate" id="mpGate">
+    <div class="gate-card">
+      <span class="mark"><svg viewBox="0 0 100 100" width="44" height="44"><use href="#sb-mark"/></svg></span>
+      <p class="eyebrow" style="margin:18px 0 6px">Member Access</p>
+      <h3 class="serif" style="font-size:24px;margin-bottom:22px">Member Login</h3>
+      <input id="mpId" type="text" placeholder="Member ID — e.g. SB-2026-0001" style="letter-spacing:.08em;margin-bottom:12px" onkeydown="if(event.key==='Enter')memberLogin()">
+      <input id="mpEmail" type="email" placeholder="Email on file" onkeydown="if(event.key==='Enter')memberLogin()">
+      <p id="mpErr" class="gate-err">We couldn't find that Member ID and email. Please check and try again.</p>
+      <button class="btn btn-solid" style="width:100%;margin-top:16px" onclick="memberLogin()">Enter</button>
+      <span class="gate-back" onclick="closeMember()">← Back to site</span>
+    </div>
+  </div>
+  <div class="mp-app" id="mpApp">
+    <header class="admin-top">
+      <div class="admin-brand"><span class="mark"><svg viewBox="0 0 100 100" width="30" height="30"><use href="#sb-mark"/></svg></span><div><strong>Soho Boulevard</strong><span class="ab-sub">Member Portal</span></div></div>
+      <div class="admin-top-actions">
+        <button class="abtn" onclick="downloadPortalCard()">↧ Download Card</button>
+        <button class="abtn solid" onclick="memberLogout()">Log Out</button>
+      </div>
+    </header>
+    <div class="mp-grid">
+      <div class="member-card" id="portalCard">
+        <div class="mc-left">
+          <span class="mark"><svg viewBox="0 0 100 100" width="30" height="30"><use href="#sb-mark"/></svg></span>
+          <p class="mc-label">Member ID</p>
+          <p class="mc-id" id="pmId">—</p>
+          <p class="mc-name" id="pmName">—</p>
+        </div>
+        <div class="mc-right"><div class="mc-qr" id="pmQr"></div><p class="mc-scan">Scan for access</p></div>
+      </div>
+      <div class="mp-detail" id="mpDetail"></div>
+    </div>
+    <p style="font-size:12.5px;color:var(--accent);letter-spacing:.04em;margin-top:18px">Present this QR code or your Member ID at Soho Boulevard for access.</p>
+    <h3 class="mp-sec-title">Your Events</h3>
+    <ul class="mp-events" id="mpEvents"></ul>
+    <h3 class="mp-sec-title">Quick Actions</h3>
+    <div class="mp-actions">
+      <button class="btn" type="button" onclick="closeMember();setTimeout(()=>document.getElementById('events').scrollIntoView({behavior:'smooth'}),60)">Browse Events</button>
+      <button class="btn" type="button" onclick="closeMember();setTimeout(()=>document.getElementById('tour').scrollIntoView({behavior:'smooth'}),60)">Book a Tour</button>
+      <a class="btn" href="mailto:members@sohoboulevard.com">Contact Concierge</a>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div class="admin-overlay" id="adminOverlay" aria-hidden="true">
+  <div class="admin-gate" id="adminGate">
+    <div class="gate-card">
+      <span class="mark"><svg viewBox="0 0 100 100" width="44" height="44"><use href="#sb-mark"/></svg></span>
+      <p class="eyebrow" style="margin:18px 0 6px">Members Register</p>
+      <h3 class="serif" style="font-size:24px;margin-bottom:22px">Admin Access</h3>
+      <input id="adminPass" type="password" placeholder="Passcode" onkeydown="if(event.key==='Enter')adminUnlock()">
+      <p id="adminGateErr" class="gate-err">Incorrect passcode.</p>
+      <button class="btn btn-solid" style="width:100%;margin-top:16px" onclick="adminUnlock()">Enter Dashboard</button>
+      <span class="gate-back" onclick="closeAdmin()">← Back to site</span>
+    </div>
+  </div>
+  <div class="admin-app" id="adminApp">
+    <header class="admin-top">
+      <div class="admin-brand"><span class="mark"><svg viewBox="0 0 100 100" width="30" height="30"><use href="#sb-mark"/></svg></span><div><strong>Soho Boulevard</strong><span class="ab-sub">Membership Register · Admin</span></div></div>
+      <div class="admin-top-actions">
+        <button class="abtn" onclick="renderAdmin()">↻ Refresh</button>
+        <button class="abtn" onclick="exportCSV()">↧ Export Members</button>
+        <button class="abtn solid" onclick="closeAdmin()">Close</button>
+      </div>
+    </header>
+    <div class="admin-subhead">Site Analytics</div>
+    <div class="admin-stats">
+      <div class="stat"><span class="s-num" id="statVisits">0</span><span class="s-lab">Total Visits</span></div>
+      <div class="stat"><span class="s-num" id="statVisitsToday">0</span><span class="s-lab">Visits Today</span></div>
+      <div class="stat"><span class="s-num" id="statUnique">0</span><span class="s-lab">Unique Visitors</span></div>
+    </div>
+    <div class="analytics-week" id="analyticsWeek"></div>
+
+    <div class="admin-subhead">Applications &amp; Events</div>
+    <div class="admin-stats">
+      <div class="stat"><span class="s-num" id="statTotal">0</span><span class="s-lab">Membership Applications</span></div>
+      <div class="stat"><span class="s-num" id="statToday">0</span><span class="s-lab">New Today</span></div>
+      <div class="stat"><span class="s-num" id="statPrive">0</span><span class="s-lab">Echelon Privé Requests</span></div>
+      <div class="stat"><span class="s-num" id="statEvents">0</span><span class="s-lab">Event Sign-ups</span></div>
+    </div>
+
+    <div class="admin-subhead">Membership Applications</div>
+    <div class="admin-toolbar"><input id="adminSearch" placeholder="Search name, email, phone or tier…" oninput="renderApplications()"></div>
+    <div class="admin-note">Prototype storage — applications are saved in this browser only, so you'll see entries submitted on this device. For a live register that captures every applicant, connect a backend such as Google Sheets, Airtable or Supabase.</div>
+    <div class="admin-table-wrap">
+      <table class="admin-table">
+        <thead><tr><th>Ref</th><th>Applicant</th><th>Contact</th><th>Tier</th><th>Interest</th><th>Clubs</th><th>Interested In</th><th>Status</th><th></th></tr></thead>
+        <tbody id="adminRows"></tbody>
+      </table>
+    </div>
+
+    <div class="admin-subhead">Event Interest <button class="abtn" onclick="exportEventsCSV()">↧ Export Events</button> <button class="abtn danger" onclick="clearAll()">Clear All Data</button></div>
+    <div class="admin-table-wrap">
+      <table class="admin-table" style="min-width:780px">
+        <thead><tr><th>Event</th><th>Name</th><th>Contact</th><th>Note</th><th>Status</th><th></th></tr></thead>
+        <tbody id="adminEventRows"></tbody>
+      </table>
+    </div>
+
+    <div class="admin-subhead">Push Emails / Newsletter</div>
+    <div class="email-tools">
+      <div class="email-recipients">
+        <div class="er-head">
+          <label class="er-all"><input type="checkbox" id="emailAll" onclick="toggleAllEmails(this)"> Select all</label>
+          <span id="emailCount" class="er-count">0 selected</span>
+        </div>
+        <div class="er-list" id="emailList"></div>
+      </div>
+      <div class="email-compose">
+        <label>Subject</label>
+        <input id="emailSubject" type="text" placeholder="e.g. This week at Soho Boulevard">
+        <label>Message</label>
+        <textarea id="emailBody" rows="9" placeholder="Write your newsletter here…"></textarea>
+        <div class="email-actions">
+          <span id="emailStatus" class="er-count"></span>
+          <div style="display:flex;gap:10px">
+            <button class="abtn" onclick="previewNewsletter()">Preview</button>
+            <button class="abtn solid" onclick="sendNewsletter()">Send Newsletter</button>
+          </div>
+        </div>
+        <div class="email-preview" id="emailPreview">
+          <div class="ep-head"><span>Preview — as <b id="epTo">—</b></span><button class="ep-close" onclick="document.getElementById('emailPreview').classList.remove('show')">✕</button></div>
+          <p class="ep-subj" id="epSubj"></p>
+          <div class="ep-body" id="epBody"></div>
+        </div>
+        <p class="admin-note" style="margin-top:14px">Each email is personalized — a greeting with the member's first name is added automatically. You can also drop <strong>{first}</strong> or <strong>{name}</strong> anywhere in the subject or message to place their name yourself. With the Google Sheets backend, every recipient receives their own individual email; without it, your mail app opens with the list in BCC.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script>
+function toggleNav(btn){
+  const links=document.getElementById('navLinks');
+  const open=links.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+}
+document.querySelectorAll('#navLinks a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    document.getElementById('navLinks').classList.remove('open');
+    document.querySelector('.nav-toggle').setAttribute('aria-expanded','false');
+  });
+});
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+function alSubmit(e){
+  e.preventDefault();
+  document.getElementById('alMsg').style.display='block';
+  e.target.reset();
+  return false;
+}
+
+/* ---------- DATA STORE ---------- */
+const APP_KEY='sb_applications';
+const EV_KEY='sb_event_regs';
+const ANALYTICS_KEY='sb_analytics';
+/* ---------- BACKEND CONFIG ----------
+   To switch on the shared Google Sheets backend, paste your Apps Script
+   Web App URL (ending in /exec) into SHEETS_URL, and put the same secret
+   you set in the script into SHEETS_TOKEN. Leave SHEETS_URL empty to run
+   in local (prototype) mode. */
+const SHEETS_URL='';
+const SHEETS_TOKEN='';
+function backendOn(){ return typeof SHEETS_URL==='string' && SHEETS_URL.indexOf('http')===0; }
+function hasArtifactStore(){ return typeof window!=='undefined' && window.storage && typeof window.storage.get==='function'; }
+async function loadKey(k){
+  try{
+    if(backendOn()){
+      const res=await fetch(SHEETS_URL+'?key='+encodeURIComponent(k)+'&token='+encodeURIComponent(SHEETS_TOKEN));
+      const j=await res.json();
+      return (j&&j.data)?j.data:[];
+    }
+    if(hasArtifactStore()){ const r=await window.storage.get(k); return r&&r.value?JSON.parse(r.value):[]; }
+    const v=localStorage.getItem(k); return v?JSON.parse(v):[];
+  }catch(e){ return []; }
+}
+async function saveKey(k,list){
+  try{
+    if(backendOn()){
+      await fetch(SHEETS_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'save',key:k,data:list,token:SHEETS_TOKEN})});
+      return;
+    }
+    if(hasArtifactStore()){ await window.storage.set(k, JSON.stringify(list)); return; }
+    localStorage.setItem(k, JSON.stringify(list));
+  }catch(e){ console.error('Storage save failed:',e); }
+}
+
+/* ---------- MEMBERSHIP FORM ---------- */
+async function applySubmit(e){
+  e.preventDefault();
+  const form=e.target;
+  const list=await loadKey(APP_KEY);
+  const memberNo='SB-'+new Date().getFullYear()+'-'+String(list.length+1).padStart(4,'0');
+  const rec={
+    id:'SB-'+Date.now().toString(36).toUpperCase(),
+    memberNo:memberNo,
+    ts:new Date().toISOString(),
+    name:form.name.value.trim(),
+    email:form.email.value.trim(),
+    phone:form.phone.value.trim(),
+    birthday:form.birthday.value,
+    interest:[...form.querySelectorAll('input[name="interest"]:checked')].map(i=>i.value),
+    clubs:[...form.querySelectorAll('input[name="clubs"]:checked')].map(i=>i.value),
+    tier:(form.querySelector('input[name="tier"]:checked')||{}).value||'',
+    interestedIn:[...form.querySelectorAll('input[name="interestedIn"]:checked')].map(i=>i.value),
+    status:'New'
+  };
+  list.push(rec); await saveKey(APP_KEY,list);
+  document.getElementById('mcId').textContent=memberNo;
+  document.getElementById('mcName').textContent=rec.name;
+  const qc=document.getElementById('mcQr'); qc.innerHTML='';
+  try{
+    new QRCode(qc,{text:'SOHO BOULEVARD | MEMBER '+memberNo+' | '+rec.name,width:110,height:110,colorDark:'#241C13',colorLight:'#F6F2E9',correctLevel:QRCode.CorrectLevel.H});
+  }catch(err){ qc.innerHTML='<div style="font-family:monospace;font-size:12px;color:#241C13;padding:34px 14px">'+memberNo+'</div>'; }
+  form.style.display='none';
+  document.getElementById('formConfirm').classList.add('show');
+  document.getElementById('formConfirm').scrollIntoView({behavior:'smooth',block:'center'});
+  return false;
+}
+
+/* ---------- EVENTS ---------- */
+const EVENTS={
+  'ibiza-night':{
+    title:'Ibiza Night', cat:'Social · Music',
+    date:'Date to be announced', loc:'The Rooftop · Soho Boulevard, Maitama',
+    img:'https://loremflickr.com/1600/900/ibiza,party,dj?lock=61',
+    body:'The Boulevard after dark. An open-air night of Balearic house, sundown sets and the Soho crowd at its best — drinks flowing, lights low, and a sound that runs from golden hour to late. Dress the part.',
+    points:['Sundown to late · live DJ sets','Open-air rooftop setting','Signature cocktails &amp; bottle service','Members and approved guests only','Limited capacity — register early']
+  },
+  'world-cup':{
+    title:'World Cup Live Stream', cat:'Screening · Match Day',
+    date:'Every match day · Live', loc:'The Lounge &amp; Rooftop · Soho Boulevard',
+    img:'https://loremflickr.com/1600/900/football,stadium,fans?lock=62',
+    body:'Every fixture, on the big screen, with the best atmosphere in Maitama. Full bar, match-day menu and the Soho crowd behind every goal. Reserve your spot for the games that matter most.',
+    points:['All matches shown live on the big screen','Full bar &amp; match-day menu','Reserved seating for registered guests','Group bookings welcome','Arsenal &amp; marquee fixtures fill fast']
+  },
+  'padel-open':{
+    title:'Padel Open Day', cat:'Sport · Community',
+    date:'Coming soon', loc:'The Padel Courts · Soho Boulevard',
+    img:'https://loremflickr.com/1600/900/padel,sport?lock=63',
+    body:'A placeholder for an upcoming open day on the padel courts — come play, watch, and meet the community. Full details and timing to be confirmed. Register your interest and we\u2019ll keep you posted.',
+    points:['Open play &amp; friendly matches','Coaching tasters available','All levels welcome','Refreshments on site','Details to be confirmed']
+  },
+  'summer-social':{
+    title:'Summer Rooftop Social', cat:'Private · Social',
+    date:'Coming soon', loc:'The Rooftop · Soho Boulevard',
+    img:'https://loremflickr.com/1600/900/rooftop,cocktail,sunset?lock=64',
+    body:'A placeholder for an upcoming members\u2019 social on the rooftop — an evening of music, drinks and connection. Full details and date to be confirmed. Register your interest to be first to hear.',
+    points:['Music, drinks &amp; connection','Rooftop setting at sundown','Members &amp; approved guests','Limited capacity','Details to be confirmed']
+  }
+};
+let currentEventSlug=null;
+
+function openEvent(slug){
+  const ev=EVENTS[slug]; if(!ev) return;
+  currentEventSlug=slug;
+  document.getElementById('evImg').src=ev.img;
+  document.getElementById('evImg').alt=ev.title;
+  document.getElementById('evCat').textContent=ev.cat;
+  document.getElementById('evTitle').textContent=ev.title;
+  document.getElementById('evDate').innerHTML=ev.date;
+  document.getElementById('evLoc').innerHTML=ev.loc;
+  document.getElementById('evBody').innerHTML=ev.body;
+  document.getElementById('evRegTitle').textContent='Register for '+ev.title+'.';
+  document.getElementById('evPoints').innerHTML=(ev.points||[]).map(p=>'<li>'+p+'</li>').join('');
+  const f=document.getElementById('eventForm'); f.reset(); f.style.display='block';
+  document.getElementById('evConfirm').classList.remove('show');
+  const ov=document.getElementById('eventOverlay');
+  ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden'; ov.scrollTop=0;
+}
+function closeEvent(){
+  const ov=document.getElementById('eventOverlay');
+  ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+  if(location.hash.indexOf('#event=')===0) history.replaceState(null,'',location.pathname+location.search);
+}
+async function eventSubmit(e){
+  e.preventDefault();
+  const f=e.target; const ev=EVENTS[currentEventSlug]||{title:currentEventSlug};
+  const rec={
+    id:'EV-'+Date.now().toString(36).toUpperCase(),
+    ts:new Date().toISOString(),
+    event:ev.title,
+    name:f.name.value.trim(), email:f.email.value.trim(), phone:f.phone.value.trim(),
+    guests:f.guests.value, note:f.note.value.trim(), status:'New'
+  };
+  const list=await loadKey(EV_KEY); list.push(rec); await saveKey(EV_KEY,list);
+  f.style.display='none';
+  document.getElementById('evConfirm').classList.add('show');
+  return false;
+}
+
+/* ---------- ADMIN ---------- */
+const ADMIN_PASS='soho2026';
+let sessionUnlocked=false;
+
+function openAdmin(){
+  const ov=document.getElementById('adminOverlay');
+  ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  const gate=document.getElementById('adminGate'), app=document.getElementById('adminApp');
+  if(sessionUnlocked){ gate.style.display='none'; app.style.display='block'; renderAdmin(); }
+  else { gate.style.display='flex'; app.style.display='none'; document.getElementById('adminPass').focus(); }
+}
+function closeAdmin(){
+  const ov=document.getElementById('adminOverlay');
+  ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+  if(location.hash==='#admin') history.replaceState(null,'',location.pathname+location.search);
+}
+function adminUnlock(){
+  if(document.getElementById('adminPass').value===ADMIN_PASS){
+    sessionUnlocked=true;
+    document.getElementById('adminGate').style.display='none';
+    document.getElementById('adminApp').style.display='block';
+    renderAdmin();
+  } else { document.getElementById('adminGateErr').style.display='block'; }
+}
+
+function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function fmtDate(iso){const d=new Date(iso);return d.toLocaleDateString(undefined,{day:'2-digit',month:'short',year:'numeric'})+' · '+d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'});}
+
+async function renderAdmin(){ await renderAnalytics(); await renderApplications(); await renderEvents(); await renderEmailRecipients(); }
+
+async function renderEmailRecipients(){
+  const c=document.getElementById('emailList'); if(!c) return;
+  const checked=new Set([...document.querySelectorAll('.er-cb:checked')].map(x=>x.value));
+  const apps=await loadKey(APP_KEY);
+  const seen={}, people=[];
+  apps.forEach(r=>{ const e=(r.email||'').toLowerCase(); if(e&&!seen[e]){ seen[e]=1; people.push(r); } });
+  if(!people.length){ c.innerHTML='<p style="color:var(--smoke);font-size:13px;padding:10px">No member emails yet.</p>'; updateEmailCount(); return; }
+  c.innerHTML=people.map(p=>'<label class="er-item"><input type="checkbox" class="er-cb" value="'+esc(p.email)+'" data-name="'+esc(p.name)+'"'+(checked.has(p.email)?' checked':'')+' onchange="updateEmailCount()"> <span><strong>'+esc(p.name)+'</strong> · '+esc(p.email)+' <em>'+esc(p.status||'New')+'</em></span></label>').join('');
+  updateEmailCount();
+}
+function updateEmailCount(){ const n=document.querySelectorAll('.er-cb:checked').length; const el=document.getElementById('emailCount'); if(el) el.textContent=n+' selected'; }
+function toggleAllEmails(cb){ document.querySelectorAll('.er-cb').forEach(x=>x.checked=cb.checked); updateEmailCount(); }
+function previewNewsletter(){
+  const picks=[...document.querySelectorAll('.er-cb:checked')].map(x=>({email:x.value,name:x.getAttribute('data-name')||''}));
+  const subject=(document.getElementById('emailSubject').value||'').trim();
+  const body=(document.getElementById('emailBody').value||'').trim();
+  const st=document.getElementById('emailStatus');
+  if(!picks.length){ st.textContent='Select a recipient to preview.'; return; }
+  if(!subject||!body){ st.textContent='Add a subject and a message to preview.'; return; }
+  const r=picks[0];
+  const first=((r.name||'').trim().split(' ')[0])||'there';
+  const hasToken=/\{name\}|\{first\}/i.test(body);
+  const outBody=hasToken?personalize(body,r.name):('Hi '+first+',\n\n'+body);
+  const outSubj=personalize(subject,r.name);
+  document.getElementById('epTo').textContent=(r.name?r.name+' ('+r.email+')':r.email);
+  document.getElementById('epSubj').textContent=outSubj;
+  document.getElementById('epBody').textContent=outBody;
+  document.getElementById('emailPreview').classList.add('show');
+  st.textContent=(picks.length>1?'Preview shown for the first of '+picks.length+' recipients.':'Preview shown.');
+}
+function personalize(text,name){
+  const first=((name||'').trim().split(' ')[0])||'there';
+  return String(text).replace(/\{name\}/gi,(name||'there')).replace(/\{first\}/gi,first);
+}
+async function sendNewsletter(){
+  const picks=[...document.querySelectorAll('.er-cb:checked')].map(x=>({email:x.value,name:x.getAttribute('data-name')||''}));
+  const subject=(document.getElementById('emailSubject').value||'').trim();
+  const body=(document.getElementById('emailBody').value||'').trim();
+  const st=document.getElementById('emailStatus');
+  if(!picks.length){ st.textContent='Select at least one recipient.'; return; }
+  if(!subject||!body){ st.textContent='Add a subject and a message.'; return; }
+  if(backendOn()){
+    st.textContent='Sending…';
+    try{
+      await fetch(SHEETS_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'sendEmail',recipients:picks,subject:subject,body:body,token:SHEETS_TOKEN})});
+      st.textContent='Sent to '+picks.length+' recipient(s), each personally greeted.';
+    }catch(e){ st.textContent='Send failed — check the backend URL.'; }
+  } else {
+    const hasToken=/\{name\}|\{first\}/i.test(body);
+    let outBody, outSubj;
+    if(picks.length===1){
+      outBody=hasToken?personalize(body,picks[0].name):('Hi '+(((picks[0].name||'').trim().split(' ')[0])||'there')+',\n\n'+body);
+      outSubj=personalize(subject,picks[0].name);
+    } else {
+      outBody=hasToken?personalize(body,'there'):('Hi there,\n\n'+body);
+      outSubj=personalize(subject,'there');
+    }
+    window.location.href='mailto:?bcc='+encodeURIComponent(picks.map(r=>r.email).join(','))+'&subject='+encodeURIComponent(outSubj)+'&body='+encodeURIComponent(outBody);
+    st.textContent=(picks.length===1?'Opening a personalized email…':'Opening your mail app with '+picks.length+' in BCC (per-name personalization needs the backend)…');
+  }
+}
+
+async function renderApplications(){
+  const list=await loadKey(APP_KEY);
+  const q=(document.getElementById('adminSearch').value||'').toLowerCase();
+  let rows=list.slice().reverse();
+  if(q) rows=rows.filter(r=>(r.name+' '+r.email+' '+r.phone+' '+r.tier).toLowerCase().includes(q));
+  document.getElementById('statTotal').textContent=list.length;
+  const today=new Date().toDateString();
+  document.getElementById('statToday').textContent=list.filter(r=>new Date(r.ts).toDateString()===today).length;
+  document.getElementById('statPrive').textContent=list.filter(r=>r.tier==='Echelon Privé').length;
+  const tb=document.getElementById('adminRows');
+  if(!rows.length){ tb.innerHTML='<tr><td colspan="9" class="empty">'+(q?'No matches.':'No applications yet. Submitted forms will appear here.')+'</td></tr>'; return; }
+  const ss=['New','Reviewing','Approved','Waitlist','Declined'];
+  tb.innerHTML=rows.map(r=>`
+    <tr>
+      <td class="mono">${esc(r.memberNo||r.id)}</td>
+      <td>${esc(r.name)}<div class="sub">${fmtDate(r.ts)}${r.birthday?' · DOB '+esc(r.birthday):''}</div></td>
+      <td><a href="mailto:${esc(r.email)}">${esc(r.email)}</a><div class="sub">${esc(r.phone)}</div></td>
+      <td>${esc(r.tier)||'—'}</td>
+      <td>${esc((r.interest||[]).join(', '))||'—'}</td>
+      <td>${esc((r.clubs||[]).join(', '))||'—'}</td>
+      <td>${esc((r.interestedIn||[]).join(', '))||'—'}</td>
+      <td><select class="st" onchange="setStatus('${r.id}',this.value)">${ss.map(s=>`<option ${s===(r.status||'New')?'selected':''}>${s}</option>`).join('')}</select></td>
+      <td class="row-actions">
+        <button class="rbtn approve" onclick="setStatus('${r.id}','Approved')">Approve</button>
+        <button class="rbtn reject" onclick="setStatus('${r.id}','Declined')">Reject</button>
+        <button class="del" onclick="delRow('${r.id}')" title="Delete">✕</button>
+      </td>
+    </tr>`).join('');
+}
+
+async function renderEvents(){
+  const list=await loadKey(EV_KEY);
+  document.getElementById('statEvents').textContent=list.length;
+  const tb=document.getElementById('adminEventRows');
+  if(!list.length){ tb.innerHTML='<tr><td colspan="6" class="empty">No event registrations yet.</td></tr>'; return; }
+  const ss=['New','Confirmed','Waitlist','Cancelled'];
+  tb.innerHTML=list.slice().reverse().map(r=>`
+    <tr>
+      <td><strong style="font-family:var(--serif);font-weight:400">${esc(r.event)}</strong></td>
+      <td>${esc(r.name)}<div class="sub">${fmtDate(r.ts)}</div></td>
+      <td><a href="mailto:${esc(r.email)}">${esc(r.email)}</a><div class="sub">${esc(r.phone)}${r.guests&&r.guests!=='1'?' · '+esc(r.guests)+' guests':''}</div></td>
+      <td>${esc(r.note)||'—'}</td>
+      <td><select class="st" onchange="setEvStatus('${r.id}',this.value)">${ss.map(s=>`<option ${s===(r.status||'New')?'selected':''}>${s}</option>`).join('')}</select></td>
+      <td><button class="del" onclick="delEv('${r.id}')" title="Delete">✕</button></td>
+    </tr>`).join('');
+}
+
+async function setStatus(id,val){ const l=await loadKey(APP_KEY); const i=l.findIndex(r=>r.id===id); if(i>-1){l[i].status=val; await saveKey(APP_KEY,l); renderApplications();} }
+async function delRow(id){ if(!confirm('Delete this application?'))return; let l=await loadKey(APP_KEY); l=l.filter(r=>r.id!==id); await saveKey(APP_KEY,l); renderApplications(); }
+async function setEvStatus(id,val){ const l=await loadKey(EV_KEY); const i=l.findIndex(r=>r.id===id); if(i>-1){l[i].status=val; await saveKey(EV_KEY,l); renderEvents();} }
+async function delEv(id){ if(!confirm('Delete this registration?'))return; let l=await loadKey(EV_KEY); l=l.filter(r=>r.id!==id); await saveKey(EV_KEY,l); renderEvents(); }
+async function clearAll(){ if(!confirm('Delete ALL applications AND event sign-ups? This cannot be undone.'))return; await saveKey(APP_KEY,[]); await saveKey(EV_KEY,[]); renderAdmin(); }
+
+function downloadCSV(head,body,name){
+  const csv=[head,...body].map(row=>row.map(c=>'"'+String(c==null?'':c).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const blob=new Blob([csv],{type:'text/csv'}); const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=name; a.click(); URL.revokeObjectURL(url);
+}
+async function exportCSV(){
+  const list=await loadKey(APP_KEY); if(!list.length){ alert('No applications to export.'); return; }
+  downloadCSV(['Ref','Submitted','Name','Email','Phone','DOB','Interest','Clubs','Tier','InterestedIn','Status'],
+    list.map(r=>[r.id,r.ts,r.name,r.email,r.phone,r.birthday,(r.interest||[]).join('|'),(r.clubs||[]).join('|'),r.tier,(r.interestedIn||[]).join('|'),r.status]),
+    'soho-membership-applications.csv');
+}
+async function exportEventsCSV(){
+  const list=await loadKey(EV_KEY); if(!list.length){ alert('No event registrations to export.'); return; }
+  downloadCSV(['Ref','Submitted','Event','Name','Email','Phone','Guests','Note','Status'],
+    list.map(r=>[r.id,r.ts,r.event,r.name,r.email,r.phone,r.guests,r.note,r.status]),
+    'soho-event-interest.csv');
+}
+
+function downloadCard(){
+  const card=document.querySelector('.member-card');
+  const id=(document.getElementById('mcId').textContent||'member').replace(/[^A-Za-z0-9-]/g,'');
+  if(typeof html2canvas==='undefined'||!card){ alert('Could not generate image — please screenshot your card instead.'); return; }
+  html2canvas(card,{backgroundColor:null,scale:2,useCORS:true}).then(canvas=>{
+    canvas.toBlob(blob=>{
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a'); a.href=url; a.download='soho-boulevard-'+id+'.png'; a.click(); URL.revokeObjectURL(url);
+    });
+  }).catch(()=>alert('Could not generate image — please screenshot your card instead.'));
+}
+
+/* ---------- MEMBER PORTAL ---------- */
+let sessionMember=null;
+function openMember(){
+  const ov=document.getElementById('memberOverlay');
+  ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  if(sessionMember){ document.getElementById('mpGate').style.display='none'; document.getElementById('mpApp').style.display='block'; renderMember(sessionMember); }
+  else { document.getElementById('mpErr').style.display='none'; document.getElementById('mpGate').style.display='flex'; document.getElementById('mpApp').style.display='none'; document.getElementById('mpId').focus(); }
+}
+function closeMember(){
+  const ov=document.getElementById('memberOverlay');
+  ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+  if(location.hash==='#member') history.replaceState(null,'',location.pathname+location.search);
+}
+async function memberLogin(){
+  const idv=(document.getElementById('mpId').value||'').trim().toUpperCase();
+  const emv=(document.getElementById('mpEmail').value||'').trim().toLowerCase();
+  const list=await loadKey(APP_KEY);
+  const rec=list.find(r=>(r.memberNo||'').toUpperCase()===idv && (r.email||'').toLowerCase()===emv);
+  if(!rec){ document.getElementById('mpErr').style.display='block'; return; }
+  sessionMember=rec; document.getElementById('mpErr').style.display='none';
+  document.getElementById('mpGate').style.display='none'; document.getElementById('mpApp').style.display='block';
+  renderMember(rec);
+}
+function memberLogout(){
+  sessionMember=null;
+  document.getElementById('mpId').value=''; document.getElementById('mpEmail').value='';
+  document.getElementById('mpApp').style.display='none'; document.getElementById('mpGate').style.display='flex';
+}
+async function renderMember(rec){
+  const mid=rec.memberNo||rec.id;
+  document.getElementById('pmId').textContent=mid;
+  document.getElementById('pmName').textContent=rec.name;
+  const qc=document.getElementById('pmQr'); qc.innerHTML='';
+  try{ new QRCode(qc,{text:'SOHO BOULEVARD | MEMBER '+mid+' | '+rec.name,width:110,height:110,colorDark:'#241C13',colorLight:'#F6F2E9',correctLevel:QRCode.CorrectLevel.H}); }
+  catch(e){ qc.innerHTML='<div style="font-family:monospace;font-size:12px;color:#241C13;padding:34px 14px">'+mid+'</div>'; }
+  const since=new Date(rec.ts).toLocaleDateString(undefined,{day:'2-digit',month:'short',year:'numeric'});
+  const rows=[
+    ['Status','<span class="mp-badge">'+esc(rec.status||'New')+'</span>'],
+    ['Membership Tier',esc(rec.tier)||'Pending review'],
+    ['Member Since',since],
+    ['Primary Interest',esc((rec.interest||[]).join(', '))||'—'],
+    ['Clubs',esc((rec.clubs||[]).join(', '))||'—'],
+    ['Email',esc(rec.email)],
+    ['Phone',esc(rec.phone)||'—']
+  ];
+  document.getElementById('mpDetail').innerHTML=rows.map(r=>'<div class="row"><span class="k">'+r[0]+'</span><span class="v">'+r[1]+'</span></div>').join('');
+  const evs=(await loadKey(EV_KEY)).filter(x=>(x.email||'').toLowerCase()===(rec.email||'').toLowerCase());
+  const ul=document.getElementById('mpEvents');
+  if(!evs.length){ ul.innerHTML='<li><span style="font-size:14px;color:var(--smoke)">No event registrations yet — browse what\u2019s on below.</span></li>'; }
+  else { ul.innerHTML=evs.slice().reverse().map(x=>'<li><div><div class="mp-ev-name">'+esc(x.event)+'</div><div class="mp-ev-sub">'+fmtDate(x.ts)+(x.guests&&x.guests!=='1'?' · '+esc(x.guests)+' guests':'')+'</div></div><span class="mp-badge">'+esc(x.status||'New')+'</span></li>').join(''); }
+}
+function downloadPortalCard(){
+  const card=document.getElementById('portalCard');
+  const id=(document.getElementById('pmId').textContent||'member').replace(/[^A-Za-z0-9-]/g,'');
+  if(typeof html2canvas==='undefined'||!card){ alert('Could not generate image — please screenshot your card instead.'); return; }
+  html2canvas(card,{backgroundColor:null,scale:2,useCORS:true}).then(c=>{ c.toBlob(b=>{ const u=URL.createObjectURL(b); const a=document.createElement('a'); a.href=u; a.download='soho-boulevard-'+id+'.png'; a.click(); URL.revokeObjectURL(u); }); }).catch(()=>alert('Could not generate image — please screenshot your card instead.'));
+}
+window.addEventListener('hashchange',function(){ if(location.hash==='#member') openMember(); });
+if(location.hash==='#member') openMember();
+
+/* ---------- ANALYTICS ---------- */
+async function trackVisit(){
+  try{
+    const arr=await loadKey(ANALYTICS_KEY);
+    const a=(arr&&arr[0])?arr[0]:{total:0,byDay:{},unique:0};
+    a.total=(a.total||0)+1;
+    const today=new Date().toISOString().slice(0,10);
+    a.byDay=a.byDay||{}; a.byDay[today]=(a.byDay[today]||0)+1;
+    let isNew=false;
+    try{ if(!localStorage.getItem('sb_seen')){ localStorage.setItem('sb_seen','1'); isNew=true; } }catch(e){ isNew=true; }
+    if(isNew) a.unique=(a.unique||0)+1;
+    await saveKey(ANALYTICS_KEY,[a]);
+  }catch(e){}
+}
+async function renderAnalytics(){
+  const arr=await loadKey(ANALYTICS_KEY);
+  const a=(arr&&arr[0])?arr[0]:{total:0,byDay:{},unique:0};
+  document.getElementById('statVisits').textContent=a.total||0;
+  const today=new Date().toISOString().slice(0,10);
+  document.getElementById('statVisitsToday').textContent=(a.byDay&&a.byDay[today])||0;
+  document.getElementById('statUnique').textContent=a.unique||0;
+  const days=[]; for(let i=6;i>=0;i--){ const d=new Date(); d.setDate(d.getDate()-i); days.push(d); }
+  const counts=days.map(d=>(a.byDay&&a.byDay[d.toISOString().slice(0,10)])||0);
+  const max=Math.max(1,Math.max.apply(null,counts));
+  document.getElementById('analyticsWeek').innerHTML='<div class="aw-title">Visits · last 7 days</div><div class="aw-bars">'+days.map((d,i)=>'<div class="aw-col"><div class="aw-bar" style="height:'+Math.max(4,Math.round(counts[i]/max*100))+'%"><span>'+counts[i]+'</span></div><div class="aw-day">'+d.toLocaleDateString(undefined,{weekday:'short'})+'</div></div>').join('')+'</div>';
+}
+if(location.hash!=='#admin') trackVisit();
+
+/* ---------- INSTAGRAM FEED ---------- */
+const LIGHTWIDGET_ID='';   /* paste your LightWidget widget ID here to show your live Instagram feed */
+(function initInsta(){
+  if(!LIGHTWIDGET_ID) return;
+  var w=document.getElementById('instaWidget'); if(!w) return;
+  w.innerHTML='<iframe src="https://cdn.lightwidget.com/widgets/'+LIGHTWIDGET_ID+'.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>';
+  var f=document.getElementById('instaFallback'); if(f) f.style.display='none';
+})();
+
+/* ---------- ROUTING ---------- */
+function route(){
+  const h=location.hash;
+  if(h==='#admin') openAdmin();
+  else if(h.indexOf('#event=')===0) openEvent(h.slice(7));
+}
+window.addEventListener('hashchange',route);
+route();
+</script>
+</body>
+</html>
