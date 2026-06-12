@@ -994,7 +994,7 @@ footer{background:var(--ink);color:var(--paper-3);padding:74px 0 48px}
 
     <div class="admin-subhead">Membership Applications</div>
     <div class="admin-toolbar"><input id="adminSearch" placeholder="Search name, email, phone or tier…" oninput="renderApplications()"></div>
-    <div class="admin-note">Prototype storage — applications are saved in this browser only, so you'll see entries submitted on this device. For a live register that captures every applicant, connect a backend such as Google Sheets, Airtable or Supabase.</div>
+    <div class="admin-note" id="protoNote" style="display:none">Prototype storage — applications are saved in this browser only, so you'll see entries submitted on this device. To capture every applicant across all devices, fill in <strong>SHEETS_URL</strong> and <strong>SHEETS_TOKEN</strong> in index.html with your Google Apps Script deployment.</div>
     <div class="admin-table-wrap">
       <table class="admin-table">
         <thead><tr><th>Ref</th><th>Applicant</th><th>Contact</th><th>Tier</th><th>Interest</th><th>Clubs</th><th>Interested In</th><th>Status</th><th></th></tr></thead>
@@ -1239,10 +1239,14 @@ function adminUnlock(){
   } else { document.getElementById('adminGateErr').style.display='block'; }
 }
 
-function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function fmtDate(iso){const d=new Date(iso);return d.toLocaleDateString(undefined,{day:'2-digit',month:'short',year:'numeric'})+' · '+d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'});}
 
-async function renderAdmin(){ await renderAnalytics(); await renderApplications(); await renderEvents(); await renderEmailRecipients(); }
+async function renderAdmin(){
+  const note=document.getElementById('protoNote');
+  if(note) note.style.display=backendOn()?'none':'block';
+  await renderAnalytics(); await renderApplications(); await renderEvents(); await renderEmailRecipients();
+}
 
 async function renderEmailRecipients(){
   const c=document.getElementById('emailList'); if(!c) return;

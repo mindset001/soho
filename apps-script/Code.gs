@@ -16,7 +16,7 @@
 //      the live URL.
 // ============================================================
 
-const TOKEN = '7d4f8c1a9b3e6f2d5a8c7e1f4b9d2a6c8f3e7b1d5a9c2f6e4b8d1a7c3f9e5b2;
+const TOKEN = '7d4f8c1a9b3e6f2d5a8c7e1f4b9d2a6c8f3e7b1d5a9c2f6e4b8d1a7c3f9e5b2';
 
 // Sheet tab names
 const SHEET_APPS  = 'Applications';
@@ -74,6 +74,12 @@ function readData(key) {
         // Pipe-separated arrays → real arrays
         if (h === 'interest' || h === 'clubs' || h === 'interestedIn') {
           v = (v && String(v).length) ? String(v).split('|').filter(Boolean) : [];
+        // Date cells → YYYY-MM-DD string
+        } else if (v instanceof Date) {
+          v = Utilities.formatDate(v, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+        // Phone / numeric fields → always string
+        } else if (h === 'phone' && typeof v === 'number') {
+          v = String(v);
         }
         obj[h] = (v === undefined || v === null) ? '' : v;
       });
